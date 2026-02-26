@@ -2,10 +2,10 @@ https://x.com/clawry82 </br>
 Ca : [TBD]
 
 <p align="center">
-  <img src="public/logo.jpeg" alt="QuantAI-LumoAgent" width="20%">
+  <img src="public/logo.jpeg" alt="LumoAgent" width="20%">
 </p>
 
-<h1 align="center">QuantAI</h1>
+<h1 align="center">LumoAgent</h1>
 
 <p align="center">
   <strong>Next-Gen Quantitative Stock Analysis Powered by LumoAgent</strong>
@@ -18,8 +18,8 @@ Ca : [TBD]
 </p>
 
 <p align="center">
-  <a href="https://github.com/Danann/quantai/actions"><img src="https://github.com/Danann/quantai/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="https://codecov.io/gh/Danann/quantai"><img src="https://codecov.io/gh/Danann/quantai/branch/main/graph/badge.svg" alt="Codecov"></a>
+  <a href="https://github.com/Danann/lumoagent/actions"><img src="https://github.com/Danann/lumoagent/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://codecov.io/gh/Danann/lumoagent"><img src="https://codecov.io/gh/Danann/lumoagent/branch/main/graph/badge.svg" alt="Codecov"></a>
   <br>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14.2+-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js"></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript"></a>
@@ -28,21 +28,21 @@ Ca : [TBD]
 
 ---
 
-> **[Live Dashboard](https://quantai-demo.vercel.app)** | **[Documentation](https://docs.quantai.io)** | **[Community X](https://x.com/clawry82)**
+> **[Live Dashboard](https://lumoagent-demo.vercel.app)** | **[Documentation](https://docs.lumoagent.io)** | **[Community X](https://x.com/clawry82)**
 
 ---
 
 > **"The purpose of quant analysis is not just predicting the market, but managing the risk with intelligence."**
 
-QuantAI is a **high-performance financial intelligence environment** built on Next.js 14. Driven by **LumoAgent**—a specialized 3D AI assistant—the platform orchestrates multiple analytical models to provide real-time quantitative insights. It automatically integrates Yahoo Finance data with OpenRouter AI capabilities (GPT-4/Claude 3.5) to deliver professional-grade stock valuations, sentiment analysis, and risk scoring.
+LumoAgent is a **high-performance financial intelligence environment** built on Next.js 14. Driven by **LumoAgent**—a specialized 3D AI assistant—the platform orchestrates multiple analytical models to provide real-time quantitative insights. It automatically integrates Yahoo Finance data with OpenRouter AI capabilities (GPT-4/Claude 3.5) to deliver professional-grade stock valuations, sentiment analysis, and risk scoring.
 
 ---
 
-## Why QuantAI?
+## Why LumoAgent?
 
-Traditional stock analysis is slow and fragmented. QuantAI centralizes the entire pipeline.
+Traditional stock analysis is slow and fragmented. LumoAgent centralizes the entire pipeline.
 
-| Aspect | Manual Analysis | QuantAI (LumoAgent) |
+| Aspect | Manual Analysis | LumoAgent |
 |--------|----------------|--------------------|
 | Data Retrieval | 30+ mins across sites | **< 2s** via Yahoo Finance API |
 | AI Reasoning | Subjective & Inconsistent| **Structured** via OpenRouter LLMs |
@@ -83,8 +83,8 @@ Traditional stock analysis is slow and fragmented. QuantAI centralizes the entir
 ### 1. Installation
 
 ```bash
-git clone https://github.com/Danann/quantai.git
-cd quantai
+git clone https://github.com/Danann/lumoagent.git
+cd lumoagent
 pnpm install
 ```
 
@@ -116,7 +116,7 @@ graph LR
 
 ## LumoAgent Intelligence Methodology
 
-QuantAI's LumoAgent uses a multi-layered verification cycle for every stock ticker.
+LumoAgent's core engine uses a multi-layered verification cycle for every stock ticker.
 
 ```mermaid
 flowchart TD
@@ -146,7 +146,7 @@ flowchart TD
 
 ## AI Orchestration Layer
 
-QuantAI isn't just a dashboard; it's a **strategic orchestrator**. LumoAgent delegates tasks to specialized virtual prompts.
+LumoAgent isn't just a dashboard; it's a **strategic orchestrator**. LumoAgent delegates tasks to specialized virtual prompts.
 
 ```mermaid
 graph LR
@@ -170,7 +170,7 @@ graph LR
 
 ## Model Optimization Policy
 
-QuantAI dynamically assigns models via OpenRouter to balance cost and accuracy.
+LumoAgent dynamically assigns models via OpenRouter to balance cost and accuracy.
 
 | Tier | Model | Best For |
 |---------|-------|----------|
@@ -213,7 +213,7 @@ QuantAI dynamically assigns models via OpenRouter to balance cost and accuracy.
 ## Folder Structure
 
 ```
-quantai/
+lumoagent/
 ├── src/
 │   ├── app/              # App Router Pages (Dashboard, Auth, Skills)
 │   ├── components/       # UI & Dashboard Widgets
@@ -239,7 +239,7 @@ No. While it provides a 3D visual presence, its state is synchronized with the *
 
 ## Community & Contributing
 
-Join the discussion on our [GitHub Discussions](https://github.com/Danann/quantai/discussions) or follow the developer on [X (Twitter)](https://x.com/clawry82).
+Join the discussion on our [GitHub Discussions](https://github.com/Danann/lumoagent/discussions) or follow the developer on [X (Twitter)](https://x.com/clawry82).
 
 ### Quick Contribution Guide
 
@@ -252,7 +252,7 @@ Join the discussion on our [GitHub Discussions](https://github.com/Danann/quanta
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Danann/quantai&type=date)](https://star-history.com/#Danann/quantai&date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Danann/lumoagent&type=date)](https://star-history.com/#Danann/lumoagent&date)
 
 ---
 
