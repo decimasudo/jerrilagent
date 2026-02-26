@@ -63,6 +63,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.7(@types/react@18.3.28)
+      '@types/three':
+        specifier: ^0.183.1
+        version: 0.183.1
       autoprefixer:
         specifier: ^10.4.24
         version: 10.4.24(postcss@8.5.6)

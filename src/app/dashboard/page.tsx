@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo, Suspense } from 'react'
 import { createClient } from '@/lib/supabase'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { MarkdownRenderer } from '@/components/ui/MarkdownRenderer'
@@ -70,7 +70,7 @@ const VendorIcon = ({ provider }: { provider: string }) => {
   return <Bot className="w-5 h-5" />;
 }
 
-export default function Dashboard() {
+function DashboardContent() {
   const [ticker, setTicker] = useState('')
   const [analysis, setAnalysis] = useState('')
   const [stockData, setStockData] = useState<any>(null)
@@ -265,5 +265,19 @@ export default function Dashboard() {
         )}
       </main>
     </div>
+  )
+}
+export default function Dashboard() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen w-full items-center justify-center bg-white">
+        <div className="flex flex-col items-center gap-4">
+          <Bot className="h-10 w-10 animate-pulse text-zinc-900" />
+          <p className="text-sm font-medium tracking-widest text-zinc-400 uppercase">Synchronizing LumoAgent...</p>
+        </div>
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
   )
 }
