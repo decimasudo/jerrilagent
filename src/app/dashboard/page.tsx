@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { createClient } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
-import ReactMarkdown from 'react-markdown'
+import { MarkdownRenderer } from '@/components/ui/MarkdownRenderer'
 import { Send, Bot, Briefcase, Activity, AlertTriangle, ChevronDown, Layout } from 'lucide-react'
 
 import { Sidebar } from '@/components/dashboard/Sidebar'
@@ -277,14 +277,9 @@ export default function Dashboard() {
                       onToggleWatchlist={toggleWatchlist} 
                     />
 
-                    <div className="bg-white text-zinc-800 text-[15px]
-                      [&>h3]:text-lg [&>h3]:font-black [&>h3]:mt-10 [&>h3]:mb-4 [&>h3]:uppercase [&>h3]:text-zinc-900
-                      [&>p]:mb-6 [&>p]:leading-relaxed
-                      [&>ul]:mb-8 [&>ul]:list-disc [&>ul]:pl-6
-                      first:[&>h3]:mt-0
-                    ">
-                      <ReactMarkdown>{analysis}</ReactMarkdown>
-                    </div>
+                    <MarkdownRenderer className="bg-white text-zinc-800 text-[15px]">
+                      {analysis}
+                    </MarkdownRenderer>
                   </div>
 
                   {/* KOLOM KANAN: CHART & TECHNICAL TOOLS */}
