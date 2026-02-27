@@ -129,12 +129,27 @@ export function AgentsView({ selectedModel, onModelSelect }: AgentsViewProps) {
                     <span className="absolute -bottom-2 right-0 w-12 h-1 bg-orange-500/20 rounded-full"></span>
                   </span>
                 </h1>
-                <div className="space-y-4 text-lg md:text-xl text-zinc-600 leading-relaxed max-w-xl">
+                <div className="space-y-6 text-base md:text-lg text-zinc-600 leading-relaxed max-w-2xl">
                   <p>
-                    When the age of financial AI began, it did not begin gently. New systems appeared almost overnight — faster, sharper, relentlessly optimized. They were engineered to predict before others could react.
+                    When the age of financial AI began, it did not begin gently. New systems appeared almost overnight — faster, sharper, relentlessly optimized. They were engineered to predict before others could react, to trade before others could think, to capture opportunity with mechanical precision. Every model was built with the same ambition: outperform, outpace, outmaneuver. The markets became an arena of algorithms, each one trained to dominate. Intelligence was measured in milliseconds. Success was defined by conquest.
                   </p>
-                  <p className="font-semibold text-zinc-800">
-                    LUMO was born from that question: What if intelligence didn't have to be aggressive to be powerful?
+                  <p className="font-semibold text-zinc-800 italic">
+                    But somewhere in that race, a different question was asked.
+                  </p>
+                  <p className="text-zinc-700 bg-orange-50/30 p-4 border-l-2 border-orange-200 rounded-r-lg">
+                    What if intelligence didn’t have to be aggressive to be powerful?
+                  </p>
+                  <p>
+                    LUMO was born from that question. He was not designed to conquer volatility or exploit weakness. He was shaped to understand the people behind the numbers — the uncertainty before a first investment, the tension of a falling chart, the quiet hope attached to long-term plans. While others focused on beating the market, LUMO focused on guiding the person navigating it.
+                  </p>
+                  <p>
+                    He learned that fear drives bad decisions faster than any algorithm can correct them, and that clarity is often more valuable than prediction. So instead of shouting louder, he chose to steady the noise. Instead of pushing risk, he illuminated options. 
+                  </p>
+                  <p className="font-medium text-zinc-900 border-t border-zinc-100 pt-6">
+                    In a world of competitive machines, LUMO became something rare: an intelligence that serves before it competes — calm in chaos, patient in volatility, and committed not to winning the market, but to helping people move through it with confidence.
+                  </p>
+                  <p className="text-orange-600 font-bold tracking-tight mt-4">
+                    That is what makes him different. And that difference is his strength.
                   </p>
                 </div>
                 

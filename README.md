@@ -1,4 +1,4 @@
-https://x.com/clawry82 </br>
+https://x.com/Lumoagent </br>
 Ca : [TBD]
 
 <p align="center">
@@ -27,7 +27,7 @@ Ca : [TBD]
 
 ---
 
-> **[Live Dashboard](https://lumoagent-demo.vercel.app)** | **[Documentation](https://docs.lumoagent.io)** | **[Community X](https://x.com/clawry82)**
+> **[Live Dashboard](https://lumoagent-demo.vercel.app)** | **[Documentation](https://docs.lumoagent.io)** | **[GitHub](https://github.com/decimasudo/lumoagent)** | **[Community X](https://x.com/Lumoagent)**
 
 ---
 
