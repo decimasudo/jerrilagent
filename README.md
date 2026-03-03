@@ -1,7 +1,7 @@
 Official X Account: https://x.com/Lumoagent </br>
 Official Website: https://www.lumoagent.site/
 
-Contract Address: 
+Contract Address: CPiuNhqy7XWv8Dp9APcAoaQjvvgqtiCDMwucRxcEpump
 
 <p align="center">
   <img src="public/logo.jpeg" alt="LumoAgent" width="180px" style="border-radius: 20px; border: 2px solid #f97316;">
