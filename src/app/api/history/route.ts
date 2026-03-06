@@ -14,7 +14,17 @@ export async function GET(request: NextRequest) {
 
     const { data, error } = await supabase
       .from('chats')
-      .select('*, messages(*)')
+      .select(`
+        id,
+        title,
+        created_at,
+        messages (
+          id,
+          role,
+          content,
+          created_at
+        )
+      `)
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
       .limit(50)

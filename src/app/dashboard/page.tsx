@@ -82,7 +82,7 @@ function DashboardContent() {
     } catch (err) { console.error("Watchlist fetch error") }
   }
 
-  const executeAnalysis = async (targetTicker: string, specificAgentType?: string, customPrompt?: string) => {
+  const executeAnalysis = async (targetTicker: string, specificAgentType?: string, customPrompt?: string, skipSave = false) => {
     setLoading(true); setError(''); setAnalysis(''); setStockData(null); 
     // Kita biarkan ticker input tetap berisi text prompt agar user tahu apa yang dieksekusi
     const currentAgentType = specificAgentType || agentType;
@@ -94,7 +94,8 @@ function DashboardContent() {
           ticker: targetTicker, 
           agentType: currentAgentType,
           model: selectedModel,
-          customPrompt: customPrompt 
+          customPrompt: customPrompt,
+          skipSave: skipSave
         }), 
       })
       const data = await res.json()
@@ -170,17 +171,40 @@ function DashboardContent() {
           userEmail={userEmail} 
           history={historyList}
           onSelectHistory={(item) => { 
-            // Cari pesan dari assistant dalam riwayat pesan
+            // Cari pesan dari assistant dan user
             const assistantMessage = item.messages?.find((m: any) => m.role === 'assistant');
             const userMessage = item.messages?.find((m: any) => m.role === 'user');
             
-            // Ekstrak ticker dari title jika ada (format: "Analysis: AAPL")
+            // Ekstrak ticker dari title jika ada
             const tickerFromTitle = item.title?.includes(': ') ? item.title.split(': ')[1] : '';
+            const finalSymbol = tickerFromTitle || 'ASSET';
 
-            setTicker(userMessage?.content || tickerFromTitle || ''); 
+            setTicker(userMessage?.content || finalSymbol); 
             setAnalysis(assistantMessage?.content || 'No analysis data found.'); 
-            setStockData(null); // Reset stock data karena butuh re-fetch jika ingin grafik real-time
-            setActiveMenu('dashboard') 
+            
+            // 1. Set dummy data agar UI pindah ke halaman Research
+            setStockData({ symbol: finalSymbol }); 
+            setActiveMenu('dashboard');
+
+            // 2. Lakukan "Silent Fetch" untuk mendapatkan data Grafik & Harga terbaru
+            if (finalSymbol !== 'ASSET') {
+              fetch('/api/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                  ticker: finalSymbol, 
+                  skipAI: true // Parameter baru agar tidak bayar token OpenRouter
+                })
+              })
+              .then(res => res.json())
+              .then(json => {
+                if (json.success && json.data) {
+                  // Jika grafik berhasil diambil, timpa data dummy tadi!
+                  setStockData(json.data);
+                }
+              })
+              .catch(err => console.error("Silent fetch failed", err));
+            }
           }}
           onRemoveHistory={async (id) => {
             await fetch(`/api/history?id=${id}`, { method: 'DELETE' });
