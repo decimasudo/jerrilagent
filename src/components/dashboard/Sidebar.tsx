@@ -221,7 +221,7 @@ export function Sidebar({
           </a>
 
           <a 
-            href="https://github.com/decimasudo/jerrilagent"
+            href="https://github.com/omnimasudo/jerrilagent"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 p-2.5 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:stellar-border transition-all group"
